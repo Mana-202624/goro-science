@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>理科の語呂合わせ</title> 
+
+ <style>
+  /* 全体についての設定 */
+  body{
+    font-family:serif;
+    color:#143d38;
+    background-color:#e1eec1;
+    margin:30px;
+    padding:40px;
+  }
+
+  h1{
+    text-align:center;
+    color:#143d38
+  }
+
+ /* ボタンを押さないと出てこない画面 */
+  .screen{
+    display:none;
+  }
+
+ /* ボタンと表の設定 */
+ .botan{
+    display:block;
+    padding:40px;
+    margin-top:50px;
+    font-family:serif;
+    border-style:double;
+    border-color:#4d1900;
+    text-align:center;
+ }
+
+.botan-seibutu{
+    background-color:#d2d200;
+    color:#4a551e;
+    border-style:double;
+    border-color:#4a551e;
+ }
+
+.botan-kagaku{
+    background-color:#97cdf3;
+    color:#005070;
+    border-style:double;
+    border-color:#005070;
+ }
+
+.botan-tangensentaku{
+    background-color:#97cdf3;
+    color:#4a551e;
+    border-style:double;
+    border-color:#4a551e;
+ }
+
+.botan-c-tangensentaku{
+    background-color:#97cdf3;
+    color:#005070;
+    border-style:double;
+    border-color:#005070;
+ }
+
+.botan-back{
+    background-color:#ffffff;
+    color:#194621;
+ }
+
+
+/* 語呂合わせ表示ゾーン */
+
+.card{
+    background-color:#f7efa2;
+    border-width:3px;
+    border-style:dotted;
+ }
+
+.goro-box{
+    background-color:#fffac2;
+    color:#2b1317;
+    border-width:1px
+ }
+
+/* 語呂単語の表の設定 */
+
+table{
+    width:100%;
+    border-width:1px;
+    margin-top:20px;
+ }
+
+th,
+td{
+    border-bottom:1px;
+    padding:12px;
+    text-align:left;
+ }
+
+th{
+    background-color:#feffd2;
+ }
+
+.goro-part{
+    color:#2b3330;
+ }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- 最初の画面 -->
+
+ <div id="screen-home" class="screen" style="display:block;">
+
+  <button 
+    class="botan botan-seibutu"
+    onclick="showScreen('screen-seibutu-tangen')">
+    生物
+  </button>
+
+  <button 
+    class="botan botan-kagaku"
+    onclick="showScreen('screen-kagaku-tangen')">
+    化学
+  </button>
+
+ </div>
+
+ <!-- 生物の単元選択画面 -->
+
+ <div id="screen-seibutu-tangen" class="screen">
+  <h2>生物の単元</h2>
+ 
+ 　<button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-nettai')">
+    熱帯多雨林
+　</button>
+
+ 　<button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-uryoku')">
+    雨緑樹林
+　　</button>
+
+ 　<button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-syouyou')">
+    照葉樹林
+　　</button>
+
+　 <button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-kouyou')">
+    硬葉樹林
+　　</button>
+
+   <button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-karyoku')">
+    夏緑樹林
+　　</button>
+
+   <button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-shinyou')">
+    針葉樹林
+　　</button>
+
+
+  <button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-kuensankairo')">
+    クエン酸回路
+　</button>
+
+   <button
+    class="botan botan-tangensentaku"
+    onclick="showScreen('screen-canburiaki')">
+    カンブリア紀
+　</button>
+
+　　<button
+    class="botan botan-modoru"
+    onclick="showScreen('screen-home')">
+    戻る
+　</button>
+
+　</div>
+
+<!-- 化学の単元選択画面 -->
+
+ <div id="screen-kagaku-tangen" class="screen">
+    <h2>化学の単元</h2>
+    <button
+    class="botan botan-c-tangensentaku"
+    onclick="showScreen('screen-ensyoku')">
+    炎色反応
+　</button>
+
+    <button
+    class="botan botan-modoru"
+    onclick="showScreen('screen-home')">
+    戻る
+　</button>
+
+　</div>
+
+
+<!-- 語呂ページ 熱帯多雨林 -->
+  <div id="screen-nettai" class="screen">
+   <div class="card">
+   <h2>熱帯多雨林</h2>
+   <div class="goro-box">
+       カキは加熱して
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">カキ</td>
+         <td>フタバガキ</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">熱</td>
+         <td>熱帯多雨林</td>
+       </tr>
+
+        </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+
+<!-- 語呂ページ 雨緑樹林 -->
+  <div id="screen-uryoku" class="screen">
+   <div class="card">
+   <h2>雨緑樹林</h2>
+   <div class="goro-box">
+       雨でチークが落ちちゃった
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">雨</td>
+         <td>雨緑樹林</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">チーク</td>
+         <td>チーク</td>
+       </tr>
+
+        </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+<!-- 語呂ページ 照葉樹林 -->
+  <div id="screen-syouyou" class="screen">
+   <div class="card">
+   <h2>照葉樹林</h2>
+   <div class="goro-box">
+       勝負に負けて悔しいが、多分貸しは作れた
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">勝</td>
+         <td>照葉樹林</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">しい</td>
+         <td>シイ</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">多分</td>
+         <td>タブノキ</td>
+       </tr>
+   
+       <tr>
+         <td class="goro-part">貸し</td>
+         <td>カシ</td>
+       </tr>
+
+         </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+<!-- 語呂ページ 硬葉樹林 -->
+  <div id="screen-kouyou" class="screen">
+   <div class="card">
+   <h2>硬葉樹林</h2>
+   <div class="goro-box">
+       お利口さんなコルクガシ
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">お利</td>
+         <td>オリーブ</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">口</td>
+         <td>硬葉樹林</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">コルクガシ</td>
+         <td>コルクガシ</td>
+       </tr>
+   
+   </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+
+<!-- 語呂ページ 夏緑樹林 -->
+  <div id="screen-karyoku" class="screen">
+   <div class="card">
+   <h2>夏緑樹林</h2>
+   <div class="goro-box">
+       夏はブナの水を替えて
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">夏</td>
+         <td>夏緑樹林</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">ブナ</td>
+         <td>ブナ</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">水</td>
+         <td>ミズナラ</td>
+       </tr>
+   
+       <tr>
+         <td class="goro-part">替えて</td>
+         <td>カエデ</td>
+       </tr>
+
+         </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+<!-- 語呂ページ 針葉樹林 -->
+  <div id="screen-shinyou" class="screen">
+   <div class="card">
+   <h2>針葉樹林</h2>
+   <div class="goro-box">
+       頭皮を揉みほぐしたから針のような髪になった
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">頭皮</td>
+         <td>トウヒ</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">揉み</td>
+         <td>モミ</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">から</td>
+         <td>カラマツ</td>
+       </tr>
+   
+       <tr>
+         <td class="goro-part">針</td>
+         <td>針葉樹林</td>
+       </tr>
+
+         </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+
+
+
+<!-- 語呂ページ クエン酸回路 -->
+  <div id="screen-kuensankairo" class="screen">
+   <div class="card">
+   <h2>クエン酸回路</h2>
+   <div class="goro-box">
+       焦ったら食えないけど告白しよう　踏まれたリンゴ置き去りにした
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">焦</td>
+         <td>アセチルCoA</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">食え</td>
+         <td>クエン酸</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">けど</td>
+         <td>α-ケトグルタル酸</td>
+       </tr>
+   
+       <tr>
+         <td class="goro-part">告白</td>
+         <td>コハク酸</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">踏まれた</td>
+         <td>フマル酸</td>
+       </tr>
+ 
+       <tr>
+         <td class="goro-part">リンゴ</td>
+         <td>リンゴ酸</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">置き去り</td>
+         <td>オキサロ酢酸</td>
+       </tr>
+  </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+<!-- 語呂ページ　カンブリア紀 -->
+   <div id="screen-canburiaki" class="screen">
+    <div class="card">
+    <h2>カンブリア紀</h2>
+    <div class="goro-box">
+        顎無しババー
+    </div>
+
+   <table>
+    <thead>
+       <tr>
+        <th>語呂</th>
+        <th>用語</th>
+       </tr>
+   </thead>
+
+  <tbody>
+        <tr>
+         <td class="goro-part">顎無し</td>
+         <td>無顎類</td>
+       </tr>
+ 
+       <tr>
+         <td class="goro-part">ババー</td>
+         <td>バージェス動物群</td>
+       </tr>
+   </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-seibutu-tangen')">
+    単元一覧に戻る
+  </button>
+
+ </div>
+
+<!-- 語呂ページ 炎色反応 -->
+  <div id="screen-ensyoku" class="screen">
+   <div class="card">
+   <h2>炎色反応</h2>
+   <div class="goro-box">
+       リアカーなきK村動力借りるとうするもくれない馬力で行こう！
+
+   </div>
+
+   <table>
+    <thead>
+       <tr>
+         <th>語呂</th>
+         <th>用語</th>
+       </tr>
+    </thead>
+
+   <tbody>
+       <tr>
+         <td class="goro-part">リアカー</td>
+         <td>Li:赤</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">なき</td>
+         <td>Na：黄</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">K村</td>
+         <td>K：赤紫</td>
+       </tr>
+   
+       <tr>
+         <td class="goro-part">動力</td>
+         <td>Cu：青緑</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">借りるとう</td>
+         <td>Ca：橙赤</td>
+       </tr>
+ 
+       <tr>
+         <td class="goro-part">するもくれない</td>
+         <td>Sr：紅</td>
+       </tr>
+
+       <tr>
+         <td class="goro-part">馬力</td>
+         <td>Ba：黄緑</td>
+       </tr>
+  </tbody>
+  </table>
+  </div>
+ 
+  <button 
+    class="botan botan-modoru"
+    onclick="showScreen('screen-kagaku-tangen')">
+    単元一覧に戻る
+  </button>
+
+  </div>
+
+<!-- 画面切り替え設定 -->
+
+  <script>
+     function showScreen(screenId){
+     
+     //　見えてはいけない画面を隠す
+
+     document.getElementById('screen-home').style.display="none";
+
+      document.getElementById('screen-seibutu-tangen').style.display="none";　
+
+       document.getElementById('screen-kagaku-tangen').style.display="none";　
+
+
+      document.getElementById('screen-nettai').style.display="none";　
+
+      document.getElementById('screen-uryoku').style.display="none";　
+
+       document.getElementById('screen-syouyou').style.display="none";　
+
+        document.getElementById('screen-kouyou').style.display="none";　
+
+      document.getElementById('screen-karyoku').style.display="none";　
+
+      document.getElementById('screen-shinyou').style.display="none";
+
+        document.getElementById('screen-kuensankairo').style.display="none";　
+
+      document.getElementById('screen-canburiaki').style.display="none";　
+
+      document.getElementById('screen-ensyoku').style.display="none";
+
+      //　ボタンが押されたら画面を表示
+       document.getElementById(screenId).style.display="block";
+
+  }
+
+   </script>
+
+  </body>
+
+ </html>
+    
